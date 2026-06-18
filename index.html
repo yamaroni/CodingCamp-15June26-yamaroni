@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+
+      <!-- Greeting Widget -->
+      <section id="greeting-widget" class="widget">
+        <p id="greeting-text"></p>
+        <p id="time-display"></p>
+        <p id="date-display"></p>
+      </section>
+
+      <!-- Focus Timer Widget -->
+      <section id="timer-widget" class="widget">
+        <h2>Focus Timer</h2>
+        <div id="timer-display">25:00</div>
+        <div id="timer-complete-banner" role="alert" aria-live="polite">
+          Session complete!
+        </div>
+        <div class="timer-controls">
+          <button id="btn-start" type="button">Start</button>
+          <button id="btn-stop" type="button">Stop</button>
+          <button id="btn-reset" type="button">Reset</button>
+        </div>
+      </section>
+
+      <!-- To-Do List Widget -->
+      <section id="todo-widget" class="widget">
+        <h2>To-Do List</h2>
+        <div class="todo-input-row">
+          <label for="todo-input" class="sr-only">New task</label>
+          <input
+            id="todo-input"
+            type="text"
+            placeholder="Add a new task…"
+            maxlength="200"
+            autocomplete="off"
+          />
+          <button id="btn-add-task" type="button">Add</button>
+        </div>
+        <ul id="todo-list" aria-label="Task list"></ul>
+      </section>
+
+      <!-- Quick Links Widget -->
+      <section id="quick-links-widget" class="widget">
+        <h2>Quick Links</h2>
+        <div id="links-container" aria-label="Quick links"></div>
+        <button id="btn-add-link" type="button">+ Add Link</button>
+        <form id="add-link-form" novalidate>
+          <label for="link-label-input">Label</label>
+          <input
+            id="link-label-input"
+            type="text"
+            placeholder="Label"
+            autocomplete="off"
+          />
+          <label for="link-url-input">URL</label>
+          <input
+            id="link-url-input"
+            type="url"
+            placeholder="https://example.com"
+            autocomplete="off"
+          />
+          <button id="btn-submit-link" type="button">Save Link</button>
+        </form>
+      </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
